@@ -715,7 +715,7 @@ section[id] {
 }
 .portrait {
   position: relative;
-  max-width: 440px;
+  max-width: 360px;
 }
 .portrait::before {
   content: "";
@@ -729,9 +729,9 @@ section[id] {
   position: relative;
   z-index: 1;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 760 / 978;
   object-fit: cover;
-  object-position: 50% 20%;
+  object-position: 50% 30%;
   border-radius: 28px;
   background: #e9e1cc;
 }
@@ -1057,8 +1057,39 @@ section[id] {
   font-size: clamp(1.4rem, 2.6vw, 1.8rem);
   letter-spacing: -0.02em;
 }
+.certlist {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.cert {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid var(--ligne);
+  background: var(--blanc);
+}
+.cert__title {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+.cert__meta {
+  font-family: var(--f-mono);
+  font-size: 0.74rem;
+  color: var(--gris);
+}
 .certs {
   margin-top: 20px;
+}
+@media (max-width: 760px) {
+  .certlist {
+    grid-template-columns: 1fr;
+  }
 }
 .certs .chip {
   background: var(--blanc);
