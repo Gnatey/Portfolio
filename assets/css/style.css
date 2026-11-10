@@ -1078,7 +1078,36 @@ section[id] {
   font-size: 1.05rem;
   letter-spacing: -0.01em;
 }
+.edu__points {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--gris);
+}
+.edu__points li {
+  position: relative;
+  padding-left: 16px;
+}
+.edu__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--or);
+}
+.cert__desc {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--gris);
+}
 .cert__meta {
+  margin-top: auto;
+  padding-top: 4px;
   font-family: var(--f-mono);
   font-size: 0.74rem;
   color: var(--gris);
